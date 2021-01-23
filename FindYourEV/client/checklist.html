@@ -4,44 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choose Features</title>
+    <link rel="stylesheet" href="EVstyle.css">
 </head>
 <body style="text-align: center; margin-top: 2%;margin-bottom: 2%;margin-left: 5%;margin-right: 5%margin-left: 5%;margin-right: 5%">
-    <button style="text-align: center;" onclick="window.location.href='index.html'">Home</button>
-
-    <h1>Checklist</h1>
-    <p>Select features you want</p>
     
-    <div style="text-align: left;">
-        <h2>Car</h2>
-        <input type="checkbox" name="attributes_car" value="1" id="power"> Power<br>
-        <input type="checkbox" name="attributes_car" value="2" id="drivetrain"> Drivetrain<br>
-        <input type="checkbox" name="attributes_car" value="3" id="form_factor"> Form Factor<br>
-        <input type="checkbox" name="attributes_car" value="4" id="price"> Price<br>
-        <input type="checkbox" name="attributes_car" value="5" id="electric_type"> Electric/Hybrid<br>
-        <input type="checkbox" name="attributes_car" value="6" id="safety"> Safety Rating<br>
-        <button>Next ></button>
+    
+  
+    <br><br><br><br><br><br><br><br><br>
+    
+    <div style="text-align: center;">
+        
+        <br><br><br>
+        <input type="checkbox" name="attributes_car" value="1" id="power" class ="power"> 
+        <label class="power" for="power">Power</label> 
+
+        <input type="checkbox" name="attributes_car" value="3" id="form_factor"class="formfactor"> 
+        <label class="formfactor" for="power">Form Factor</label>
+
+        <input type="checkbox" name="attributes_car" value="4" id="price"class="price">
+        <label class="price" for="power">Price</label>
+        <br><br><br><br><br><br><br><br><br><br>
+        <input type="checkbox" name="attributes_car" value="5" id="electric_type"class="electrictype"> 
+        <label class="electrictype" for="power">Electric/Hybrid</label> 
+
+        <input type="checkbox" name="attributes_car" value="6" id="safety"class="safetyrating"> 
+        <label class="safetyrating" for="power">Safety Rating</label> 
+
+        <input type="checkbox" name="attributes_car" value="7" id ="range"class="range">
+        <label class="range" for="power">Range</label> 
+        
     </div>
 
-    <div style="text-align: left;">
-        <h2>Amenities</h2>
-        <input type="checkbox" name="attributes_amenities" value="1" id="range"> Range<br>
-        <input type="checkbox" name="attributes_amenities" value="2" id="charging_network"> Charging Network Support<br>
-        <input type="checkbox" name="attributes_amenities" value="3" id="camera"> Backup Camera<br>
-        <input type="checkbox" name="attributes_amenities" value="4" id="drive_assist"> Self-Driving<br>
-        <input type="checkbox" name="attributes_amenities" value="5" id="carplay"> Apple Carplay/Android Auto<br>
-        <button>< Prev</button>
-        <button>Next ></button>
-    </div>
+    
 
-    <div style="text-align: left;">
-        <h2>Brands</h2>
-        <input type="checkbox" name="attributes_brands" value="1" id="range"> Tesla<br>
-        <input type="checkbox" name="attributes_brands" value="2" id="charging_network"> Toyota<br>
-        <input type="checkbox" name="attributes_brands" value="3" id="camera"> Honda<br>
-        <input type="checkbox" name="attributes_brands" value="4" id="drive_assist"> Volkswagon<br>
-        <input type="checkbox" name="attributes_brands" value="5" id="carplay"> Porsche<br>
-        <button>< Prev</button>
-        <button>Submit</button>
-    </div>
+   
+    <br><br><br><br><br><br>
+    <div class ="gobackhome"><a class="homebutton" href="index.html" targer="_blank" rel="nofollow noopener">Back</a></div>
+    <div class ="gobrands"><a class="brandsbutton" href="checklist2.html" targer="_blank" rel="nofollow noopener">Next</a></div>
+</body>
 </body>
 </html>
