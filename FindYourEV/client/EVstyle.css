@@ -3,19 +3,21 @@ body {background-image: url('purpleback.png');}
 h1{ 
 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 60px;
-    text-shadow: 2px 2px rgb(37, 12, 36);
-    text-decoration: underline;
+    font-size: 75px;
+    
+    
     color: #570a3d;
 }
 h2{
     font-family: Century Gothic;
+    color: #570a3d;
 }
+
 
 p{
 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  
+    color: #570a3d;
 }
 
 .aboutus{
