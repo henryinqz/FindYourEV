@@ -171,7 +171,7 @@ def get_models_from_safety_rating(car_data: Dict, safety_rating: Dict[str, int])
     
     for model in car_data:
         model_data = car_data[model]
-        if range[MIN_RATING] <= model_data[SAFETY_RATING[CONSTANT]] <= range[MAX_RANGE]:
+        if range[MIN_RATING] <= model_data[SAFETY_RATING[CONSTANT]] <= range[MAX_RATING]:
             models_from_search_range.append(model)
     
     return models_from_search_safety
