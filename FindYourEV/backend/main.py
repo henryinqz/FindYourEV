@@ -56,20 +56,35 @@ def clean_data(input_file: TextIO) -> Dict:
     return cars
 
 def search_data(car_data: Dict, search: List[List]) -> List[str]:
-    # specification = [
-    #     [price, {min, max}],
-    #     [form_factor, {type, seats}]
-    #     ]
-    # return list of model names that match search query
+    '''
+    Return a list of car models  that match search query.
+
+    search = [
+        [brands, ["Audi", "Honda"]],
+        [years = {MIN_YEAR, MAX_YEAR}]
+        [price, {MIN_YR, MAX_YR}],
+        [power, [HIGH_POWER, NORMAL_POWER, LOW_POWER]]
+        [drivetrain, ["AWD", "FWD", "RWD"]]
+        [form_factors = ["SUV", "Sedan"]],
+        [years, {MIN_PRICE, MAX_PRICE}],
+        [ev_type, ["PHEV", "BEV", "HFCV"]],
+        [safety_rating, {MIN_RATING, MAX_RATING}],
+        [range, {MIN_RANGE, MAX_RANGE}]
+        ]
+    '''
     searched_data = []
     for specification, query in search:
         if specification == BRAND:
-            brands = get_models_from_brands(car_data, query)
-            if brands not in searched_data:
-                searched_data.append(brands)
-        # elif specification == YEAR:
+            car_with_search_brands = get_models_from_brands(car_data, query)
 
-        # elif specification == POWER:
+            if car_with_search_brands not in searched_data:
+                searched_data.append(car_with_search_brands)
+        elif specification == YEAR:
+            car_with_search_years = get_models_from_years(car_data, query)
+
+            if car_with_search_years not in searched_data:
+                searched_data.append(car_with_search_years)
+        elif specification == POWER:
 
         # elif specification == DRIVETRAIN:
 
