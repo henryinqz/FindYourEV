@@ -58,8 +58,8 @@ def search_data(car_data: Dict, search: List[List]) -> List[str]:
     Return a list of car models  that match search query.
 
     search = [
-        [brands, ["Audi", "Honda"]],
-        [years, {MIN_YEAR, MAX_YEAR}],
+        [brand, ["Audi", "Honda"]],
+        [year, {MIN_YEAR, MAX_YEAR}],
         [price, {MIN_YR, MAX_YR}],
         [power, [HIGH_POWER, NORMAL_POWER, LOW_POWER]],
         [drivetrain, ["AWD", "FWD", "RWD"]],
@@ -75,21 +75,9 @@ def search_data(car_data: Dict, search: List[List]) -> List[str]:
 
     for specification, query in search:
         if specification == BRAND[CONSTANT]:
-            car_with_search_brands = get_models_from_brands(car_data, query)
-
-            for car in car_models:
-                if car not in car_with_search_brands:
-                    searched_models.remove(car)
-
-            car_models = searched_models.copy() 
+            car_models = update_car_models(get_models_from_brands(car_data, query), car_models)
         elif specification == YEAR[CONSTANT]:
-            car_with_search_years = get_models_from_years(car_data, query)
-
-            for car in car_models:
-                if car not in car_with_search_years:
-                    searched_models.remove(car)
-
-            car_models = searched_models.copy()            
+            car_models = update_car_models(get_models_from_years(car_data, query), car_models)        
         #elif specification == POWER[CONSTANT]:
 
         # elif specification == DRIVETRAIN[CONSTANT]:
@@ -106,6 +94,15 @@ def search_data(car_data: Dict, search: List[List]) -> List[str]:
 
         # elif specification == FEATURES[CONSTANT]:
     return car_models
+
+def update_car_models(cars_with_search_query: List[str], car_models: List[str]) -> List[str]:
+    searched_models = car_models.copy()
+
+    for car in car_models:
+        if car not in cars_with_search_query:
+            searched_models.remove(car)
+
+    return searched_models # Change to searched_models.copy() if there are any bugs!
 
 def get_models_from_brands(car_data: Dict, brands: List[str]) -> List[str]:
     '''
