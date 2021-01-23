@@ -1,4 +1,5 @@
 from typing import TextIO, List, Dict, Union
+import random
 
 CONSTANT = 0
 INDEX = 1
@@ -227,9 +228,19 @@ def get_models_from_range(car_data: Dict, range_capacity: Dict[str, int]) -> Lis
     
     return models_from_search_range
 
+def get_random_cars_from_search_data(search_data: List[str], num_results: int) -> List[str]:
+    if num_results > len(search_data):
+        num_results = len(search_data)
+        
+    return random.sample(search_data, num_results)
+
 database = open("FindYourEV\ev_database.csv", "r")
 data = clean_data(database)
 # print(data)
+
+temp_search_data = search_data(data, [[BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]]])
+print(temp_search_data)
+print(get_random_cars_from_search_data(temp_search_data, 3))
 
 # print(search_data(data, [
 #     [BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]]])
