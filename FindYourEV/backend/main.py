@@ -1,7 +1,5 @@
 from typing import TextIO, List, Dict, Union
 
-
-
 CONSTANT = 0
 INDEX = 1
 BRAND = ["brand", 0]
@@ -61,47 +59,53 @@ def search_data(car_data: Dict, search: List[List]) -> List[str]:
 
     search = [
         [brands, ["Audi", "Honda"]],
-        [years = {MIN_YEAR, MAX_YEAR}]
+        [years, {MIN_YEAR, MAX_YEAR}],
         [price, {MIN_YR, MAX_YR}],
-        [power, [HIGH_POWER, NORMAL_POWER, LOW_POWER]]
-        [drivetrain, ["AWD", "FWD", "RWD"]]
-        [form_factors = ["SUV", "Sedan"]],
+        [power, [HIGH_POWER, NORMAL_POWER, LOW_POWER]],
+        [drivetrain, ["AWD", "FWD", "RWD"]],
+        [form_factors, ["SUV", "Sedan"]],
         [years, {MIN_PRICE, MAX_PRICE}],
         [ev_type, ["PHEV", "BEV", "HFCV"]],
         [safety_rating, {MIN_RATING, MAX_RATING}],
         [range, {MIN_RANGE, MAX_RANGE}]
         ]
-    '''
-    searched_data = []
+    ''' 
+    car_models = list(car_data.keys())
+    searched_models = car_models.copy() # Can't remove elements while looping over list, so use this as storage for car_models
+
     for specification, query in search:
-        if specification == BRAND:
+        if specification == BRAND[CONSTANT]:
             car_with_search_brands = get_models_from_brands(car_data, query)
 
-            if car_with_search_brands not in searched_data:
-                searched_data.append(car_with_search_brands)
-        elif specification == YEAR:
+            for car in car_models:
+                if car not in car_with_search_brands:
+                    searched_models.remove(car)
+
+            car_models = searched_models.copy() 
+        elif specification == YEAR[CONSTANT]:
             car_with_search_years = get_models_from_years(car_data, query)
 
-            if car_with_search_years not in searched_data:
-                searched_data.append(car_with_search_years)
-        elif specification == POWER:
+            for car in car_models:
+                if car not in car_with_search_years:
+                    searched_models.remove(car)
 
-        # elif specification == DRIVETRAIN:
+            car_models = searched_models.copy()            
+        #elif specification == POWER[CONSTANT]:
 
-        # elif specification == FORM_FACTOR:
+        # elif specification == DRIVETRAIN[CONSTANT]:
 
-        # elif specification == PRICE:
+        # elif specification == FORM_FACTOR[CONSTANT]:
 
-        # elif specification == EV_TYPE:
+        # elif specification == PRICE[CONSTANT]:
 
-        # elif specification == SAFETY_RATING:
+        # elif specification == EV_TYPE[CONSTANT]:
 
-        # elif specification == RANGE:
+        # elif specification == SAFETY_RATING[CONSTANT]:
 
-        # elif specification == FEATURES:
+        # elif specification == RANGE[CONSTANT]:
 
-        
-    return searched_data
+        # elif specification == FEATURES[CONSTANT]:
+    return car_models
 
 def get_models_from_brands(car_data: Dict, brands: List[str]) -> List[str]:
     '''
@@ -178,8 +182,10 @@ def get_models_from_features(car_data: Dict, years: Dict[str, int]) -> List[str]
     pass
 
 
-database = open("ev_database.csv")
+database = open("FindYourEV\ev_database.csv")
 data = clean_data(database)
 # print(data)
 # print(get_models_from_brands(data, ["Audi", "Honda"]))
 # print(get_models_from_years(data, {MIN_YR: 2020, MAX_YR: 2020}))
+print(search_data(data, [[BRAND[CONSTANT], ["Audi", "Honda"]]]))
+print(search_data(data, [[BRAND[CONSTANT], ["Audi", "Honda"]], [YEAR[CONSTANT], {MIN_YR: 2020, MAX_YR: 2021}]]))
