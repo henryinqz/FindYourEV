@@ -8,39 +8,56 @@
 </head>
 <body style="text-align: center; margin-top: 2%;margin-bottom: 2%;margin-left: 5%;margin-right: 5%margin-left: 5%;margin-right: 5%">
     
-    
-  
     <br><br><br><br><br><br><br><br><br>
     
     <div style="text-align: center;">
         
         <br><br><br>
-        <input type="checkbox" name="attributes_car" value="1" id="power" class ="power"> 
+        <input type="checkbox" name="attributes_car" value="power" id="power" class ="power"> 
         <label class="power" for="power">Power</label> 
 
-        <input type="checkbox" name="attributes_car" value="3" id="form_factor"class="formfactor"> 
+        <input type="checkbox" name="attributes_car" value="form_factor" id="form_factor"class="formfactor"> 
         <label class="formfactor" for="power">Form Factor</label>
 
-        <input type="checkbox" name="attributes_car" value="4" id="price"class="price">
+        <input type="checkbox" name="attributes_car" value="price" id="price"class="price">
         <label class="price" for="power">Price</label>
         <br><br><br><br><br><br><br><br><br><br>
-        <input type="checkbox" name="attributes_car" value="5" id="electric_type"class="electrictype"> 
-        <label class="electrictype" for="power">Electric/Hybrid</label> 
+        <input type="checkbox" name="attributes_car" value="ev_type" id="ev_type"class="ev_type"> 
+        <label class="ev_type" for="power">Electric/Hybrid</label> 
 
-        <input type="checkbox" name="attributes_car" value="6" id="safety"class="safetyrating"> 
+        <input type="checkbox" name="attributes_car" value="safety" id="safety"class="safetyrating"> 
         <label class="safetyrating" for="power">Safety Rating</label> 
 
-        <input type="checkbox" name="attributes_car" value="7" id ="range"class="range">
+        <input type="checkbox" name="attributes_car" value="range" id ="range"class="range">
         <label class="range" for="power">Range</label> 
         
     </div>
-
-    
-
    
     <br><br><br><br><br><br>
     <div class ="gobackhome"><a class="homebutton" href="index.html" targer="_blank" rel="nofollow noopener">Back</a></div>
-    <div class ="gobrands"><a class="brandsbutton" href="checklist2.html" targer="_blank" rel="nofollow noopener">Next</a></div>
+    <!-- <div class ="gobrands"><a class="brandsbutton" href="checklist2.html" targer="_blank" rel="nofollow noopener">Next</a></div> -->
+    <div id="brandsbutton" class ="gobrands"><a class="brandsbutton" targer="_blank" rel="nofollow noopener">Next</a></div>
+    
+    <script>document.getElementById("brandsbutton").onclick = async function() {
+        var checkbox_vals = []
+        var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+
+        for (var i = 0; i < checkboxes.length; i++) {
+            checkbox_vals.push(checkboxes[i].value)
+        }
+
+        console.log(checkbox_vals)
+        
+        const response = await fetch("http://127.0.0.1:5000/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(checkbox_vals)
+        })
+        console.log(await response.json())
+    }</script>
+
 </body>
 </body>
 </html>

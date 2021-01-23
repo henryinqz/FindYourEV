@@ -2,9 +2,10 @@ import data_process as data_process
 from constants import *
 
 if __name__ == "__main__":
-    database = open("FindYourEV\ev_database.csv", "r")
+    database = open("ev_database.csv", "r")
     data = data_process.clean_data(database)
-    
+    # print(data)
+
     # Test calls
     # temp_data = data_process.search_data(data, [[BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]]])
     # print(temp_data)
