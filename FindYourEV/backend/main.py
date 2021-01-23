@@ -11,7 +11,7 @@ FORM_FACTOR = ["form_factor", 5]
 PRICE = ["price", 6]
 EV_TYPE = ["ev_type", 7]
 SAFETY_RATING = ["safety_rating", 8]
-RANGE = ["range", 9]
+RANGE_CAPACITY = ["range", 9]
 FEATURES = ["features", 10]
 
 MIN_YR = "min_year"
@@ -48,7 +48,7 @@ def clean_data(input_file: TextIO) -> Dict:
             PRICE[CONSTANT]: int(info_list[PRICE[INDEX]]),
             EV_TYPE[CONSTANT]: info_list[EV_TYPE[INDEX]],
             SAFETY_RATING[CONSTANT]: float(info_list[SAFETY_RATING[INDEX]]),
-            RANGE[CONSTANT]: int(info_list[RANGE[INDEX]]),
+            RANGE_CAPACITY[CONSTANT]: int(info_list[RANGE_CAPACITY[INDEX]]),
             FEATURES[CONSTANT]: info_list[FEATURES[INDEX]]
         }
     return cars
@@ -67,7 +67,7 @@ def search_data(car_data: Dict, search: List[List]) -> List[str]:
         [years, {MIN_PRICE, MAX_PRICE}],
         [ev_type, ["PHEV", "BEV", "HFCV"]],
         [safety_rating, {MIN_RATING, MAX_RATING}],
-        [range, {MIN_RANGE, MAX_RANGE}]
+        [range_capacity, {MIN_RANGE, MAX_RANGE}]
         ]
     ''' 
     car_models = list(car_data.keys())
@@ -89,9 +89,9 @@ def search_data(car_data: Dict, search: List[List]) -> List[str]:
 
         elif specification == SAFETY_RATING[CONSTANT]:
             car_models = update_car_models(get_models_from_safety_rating(car_data, query), car_models)
-        # elif specification == RANGE[CONSTANT]:
 
-        # elif specification == FEATURES[CONSTANT]:
+        elif specification == RANGE_CAPACITY[CONSTANT]:
+            car_models = update_car_models(get_models_from_range(car_data, query), car_models)
     return car_models
 
 def update_car_models(cars_with_search_query: List[str], car_models: List[str]) -> List[str]:
@@ -172,15 +172,15 @@ def get_models_from_safety_rating(car_data: Dict, safety_rating: Dict[str, int])
     
     return models_from_search_safety
 
-def get_models_from_range(car_data: Dict, range: Dict[str, int]) -> List[str]:
+def get_models_from_range(car_data: Dict, range_capacity: Dict[str, int]) -> List[str]:
     '''
-    range = {MIN_RANGE, MAX_RANGE}
+    range_capacity = {MIN_RANGE, MAX_RANGE}
     '''
     models_from_search_range = []
 
     for model in car_data:
         model_data = car_data[model]
-        if range[MIN_RANGE] <= model_data[RANGE[CONSTANT]] <= range[MAX_RANGE]:
+        if range_capacity[MIN_RANGE] <= model_data[RANGE_CAPACITY[CONSTANT]] <= range_capacity[MAX_RANGE]:
             models_from_search_range.append(model)
     
     return models_from_search_range
@@ -203,6 +203,11 @@ print(search_data(data, [
 print(search_data(data, [
     [BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]], 
     [YEAR[CONSTANT], {MIN_YR: 2020, MAX_YR: 2021}]])
+    )
+print(search_data(data, [
+    [BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]], 
+    [YEAR[CONSTANT], {MIN_YR: 2020, MAX_YR: 2021}],
+    [RANGE_CAPACITY[CONSTANT], {MIN_RANGE: 300, MAX_RANGE: 400}]])
     )
 print(search_data(data, [
     [BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]], 
