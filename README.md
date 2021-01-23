@@ -4,4 +4,4 @@ Find your EV is the easiest way find to the most suitable electric car for you. 
 
 Developed for QHacks 2021 by Henry Wong, Zuhair Siddiqi, Kieran Hansen, & Matthew Kompel. 
 
-### https://henryinqz.github.io/FindYourEV/client
+### henryinqz.github.io/FindYourEV/client
