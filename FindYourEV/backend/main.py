@@ -42,13 +42,13 @@ def clean_data(input_file: TextIO) -> Dict:
         cars[info_list[MODEL[INDEX]]] = {
             BRAND[CONSTANT]: info_list[BRAND[INDEX]],
             YEAR[CONSTANT]: int(info_list[YEAR[INDEX]]),
-            POWER[CONSTANT]: info_list[POWER[INDEX]],
+            POWER[CONSTANT]: int(info_list[POWER[INDEX]]),
             DRIVETRAIN[CONSTANT]: info_list[DRIVETRAIN[INDEX]],
             FORM_FACTOR[CONSTANT]: info_list[FORM_FACTOR[INDEX]],
-            PRICE[CONSTANT]: info_list[PRICE[INDEX]],
+            PRICE[CONSTANT]: int(info_list[PRICE[INDEX]]),
             EV_TYPE[CONSTANT]: info_list[EV_TYPE[INDEX]],
-            SAFETY_RATING[CONSTANT]: info_list[SAFETY_RATING[INDEX]],
-            RANGE[CONSTANT]: info_list[RANGE[INDEX]],
+            SAFETY_RATING[CONSTANT]: float(info_list[SAFETY_RATING[INDEX]]),
+            RANGE[CONSTANT]: int(info_list[RANGE[INDEX]]),
             FEATURES[CONSTANT]: info_list[FEATURES[INDEX]]
         }
     return cars
