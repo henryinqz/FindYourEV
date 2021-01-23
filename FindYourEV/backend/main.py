@@ -71,7 +71,6 @@ def search_data(car_data: Dict, search: List[List]) -> List[str]:
         ]
     ''' 
     car_models = list(car_data.keys())
-    searched_models = car_models.copy() # Can't remove elements while looping over list, so use this as storage for car_models
 
     for specification, query in search:
         if specification == BRAND[CONSTANT]:
