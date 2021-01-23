@@ -31,7 +31,7 @@ for info in database.readlines():
         "ev_type": info_list[EV_TYPE],
         "safety_rating": info_list[SAFETY_RATING],
         "range": info_list[RANGE],
-        "charging": info_list[CHARGING],
+        "charging": (info_list[CHARGING] == True),
         "features": info_list[FEATURES]
     }
 print(cars)
