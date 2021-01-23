@@ -22,10 +22,10 @@ NORMAL_POWER = 150
 LOW_POWER = 0
 
 MIN_PRICE = "min_price"
-MIN_PRICE = "max_price"
+MAX_PRICE = "max_price"
 
 MIN_RATING = "min_rating"
-MIN_RATING = "max_rating"
+MAX_RATING = "max_rating"
 
 MIN_RANGE = "min_range"
 MAX_RANGE = "max_range"
@@ -76,7 +76,7 @@ def search_data(car_data: Dict, search: List[List]) -> List[str]:
         if specification == BRAND[CONSTANT]:
             car_models = update_car_models(get_models_from_brands(car_data, query), car_models)
         elif specification == YEAR[CONSTANT]:
-            car_models = update_car_models(get_models_from_years(car_data, query), car_models)        
+            car_models = update_car_models(get_models_from_years(car_data, query), car_models)     
         #elif specification == POWER[CONSTANT]:
 
         # elif specification == DRIVETRAIN[CONSTANT]:
@@ -87,8 +87,8 @@ def search_data(car_data: Dict, search: List[List]) -> List[str]:
 
         # elif specification == EV_TYPE[CONSTANT]:
 
-        # elif specification == SAFETY_RATING[CONSTANT]:
-
+        elif specification == SAFETY_RATING[CONSTANT]:
+            car_models = update_car_models(get_models_from_safety_rating(car_data, query), car_models)
         # elif specification == RANGE[CONSTANT]:
 
         # elif specification == FEATURES[CONSTANT]:
@@ -167,8 +167,8 @@ def get_models_from_safety_rating(car_data: Dict, safety_rating: Dict[str, int])
     
     for model in car_data:
         model_data = car_data[model]
-        if range[MIN_RATING] <= model_data[SAFETY_RATING[CONSTANT]] <= range[MAX_RATING]:
-            models_from_search_range.append(model)
+        if safety_rating[MIN_RATING] <= model_data[SAFETY_RATING[CONSTANT]] <= safety_rating[MAX_RATING]:
+            models_from_search_safety.append(model)
     
     return models_from_search_safety
 
@@ -197,5 +197,15 @@ data = clean_data(database)
 # print(data)
 # print(get_models_from_brands(data, ["Audi", "Honda"]))
 # print(get_models_from_years(data, {MIN_YR: 2020, MAX_YR: 2020}))
-print(search_data(data, [[BRAND[CONSTANT], ["Audi", "Honda"]]]))
-print(search_data(data, [[BRAND[CONSTANT], ["Audi", "Honda"]], [YEAR[CONSTANT], {MIN_YR: 2020, MAX_YR: 2021}]]))
+print(search_data(data, [
+    [BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]]])
+    )
+print(search_data(data, [
+    [BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]], 
+    [YEAR[CONSTANT], {MIN_YR: 2020, MAX_YR: 2021}]])
+    )
+print(search_data(data, [
+    [BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]], 
+    [YEAR[CONSTANT], {MIN_YR: 2020, MAX_YR: 2021}], 
+    [SAFETY_RATING[CONSTANT], {MIN_RATING: 5, MAX_RATING: 5}]])
+    )
