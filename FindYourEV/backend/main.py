@@ -163,13 +163,27 @@ def get_models_from_safety_rating(car_data: Dict, safety_rating: Dict[str, int])
     '''
     safety_rating = {MIN_RATING, MAX_RATING}
     '''
-    pass
+    models_from_search_safety = []
+    
+    for model in car_data:
+        model_data = car_data[model]
+        if range[MIN_RATING] <= model_data[SAFETY_RATING[CONSTANT]] <= range[MAX_RATING]:
+            models_from_search_range.append(model)
+    
+    return models_from_search_safety
 
 def get_models_from_range(car_data: Dict, range: Dict[str, int]) -> List[str]:
     '''
     range = {MIN_RANGE, MAX_RANGE}
     '''
-    pass
+    models_from_search_range = []
+
+    for model in car_data:
+        model_data = car_data[model]
+        if range[MIN_RANGE] <= model_data[RANGE[CONSTANT]] <= range[MAX_RANGE]:
+            models_from_search_range.append(model)
+    
+    return models_from_search_range
 
 def get_models_from_features(car_data: Dict, years: Dict[str, int]) -> List[str]:
     '''
