@@ -1,7 +1,6 @@
 from typing import TextIO, List, Dict, Union
 
-MIN_YR = "min_year"
-MAX_YR = "max_year"
+
 
 CONSTANT = 0
 INDEX = 1
@@ -15,8 +14,23 @@ PRICE = ["price", 6]
 EV_TYPE = ["ev_type", 7]
 SAFETY_RATING = ["safety_rating", 8]
 RANGE = ["range", 9]
-CHARGING = ["charging", 10]
-FEATURES = ["features", 11]
+FEATURES = ["features", 10]
+
+MIN_YR = "min_year"
+MAX_YR = "max_year"
+
+HIGH_POWER = 300
+NORMAL_POWER = 150
+LOW_POWER = 0
+
+MIN_PRICE = "min_price"
+MIN_PRICE = "max_price"
+
+MIN_RATING = "min_rating"
+MIN_RATING = "max_rating"
+
+MIN_RANGE = "min_range"
+MAX_RANGE = "max_range"
 
 def clean_data(input_file: TextIO) -> Dict:
     input_file.readline().strip().split(",") # First row
@@ -37,7 +51,6 @@ def clean_data(input_file: TextIO) -> Dict:
             EV_TYPE[CONSTANT]: info_list[EV_TYPE[INDEX]],
             SAFETY_RATING[CONSTANT]: info_list[SAFETY_RATING[INDEX]],
             RANGE[CONSTANT]: info_list[RANGE[INDEX]],
-            CHARGING[CONSTANT]: (info_list[CHARGING[INDEX]] == True),
             FEATURES[CONSTANT]: info_list[FEATURES[INDEX]]
         }
     return cars
@@ -70,14 +83,15 @@ def search_data(car_data: Dict, search: List[List]) -> List[str]:
 
         # elif specification == RANGE:
 
-        # elif specification == CHARGING:
-
         # elif specification == FEATURES:
 
         
     return searched_data
 
 def get_models_from_brands(car_data: Dict, brands: List[str]) -> List[str]:
+    '''
+    brands = ["Audi", "Honda"]
+    '''
     models_from_search_brands = []
 
     for model in car_data:
@@ -88,7 +102,9 @@ def get_models_from_brands(car_data: Dict, brands: List[str]) -> List[str]:
     return models_from_search_brands
 
 def get_models_from_years(car_data: Dict, years: Dict[str, int]) -> List[str]:
-    # years = {MIN_YEAR, MAX_YEAR}
+    '''
+    years = {MIN_YEAR, MAX_YEAR}
+    '''
     models_from_search_years = []
 
     for model in car_data:
@@ -98,10 +114,57 @@ def get_models_from_years(car_data: Dict, years: Dict[str, int]) -> List[str]:
     
     return models_from_search_years
 
+def get_models_from_power(car_data: Dict, power: int) -> List[str]:
+    '''
+    power = HIGH_POWER/NORMAL_POWER/LOW_POWER
+    '''
+    pass
+
+def get_models_from_drivetrain(car_data: Dict, drivetrain: List[str]) -> List[str]:
+    '''
+    drivetrain = ["AWD", "FWD", "RWD"]
+    '''
+    pass
+
+def get_models_from_form_factor(car_data: Dict, form_factors: List[str]) -> List[str]:
+    '''
+    form_factors = ["SUV", "Sedan"]
+    '''
+    pass
+
+def get_models_from_price(car_data: Dict, price: Dict[str, int]) -> List[str]:
+    '''
+    years = {MIN_PRICE, MAX_PRICE}
+    '''
+    pass
+
+def get_models_from_ev_type(car_data: Dict, ev_type: List[str]) -> List[str]:
+    '''
+    ev_type = ["PHEV", "BEV", "HFCV"]
+    '''
+    pass
+
+def get_models_from_safety_rating(car_data: Dict, safety_rating: Dict[str, int]) -> List[str]:
+    '''
+    safety_rating = {MIN_RATING, MAX_RATING}
+    '''
+    pass
+
+def get_models_from_range(car_data: Dict, range: Dict[str, int]) -> List[str]:
+    '''
+    range = {MIN_RANGE, MAX_RANGE}
+    '''
+    pass
+
+def get_models_from_features(car_data: Dict, years: Dict[str, int]) -> List[str]:
+    '''
+    
+    '''
+    pass
 
 
 database = open("ev_database.csv")
 data = clean_data(database)
 # print(data)
-# print(get_models_from_brands(data, "Audi"))
+# print(get_models_from_brands(data, ["Audi", "Honda"]))
 # print(get_models_from_years(data, {MIN_YR: 2020, MAX_YR: 2020}))
