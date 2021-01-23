@@ -12,7 +12,6 @@ PRICE = ["price", 6]
 EV_TYPE = ["ev_type", 7]
 SAFETY_RATING = ["safety_rating", 8]
 RANGE_CAPACITY = ["range", 9]
-FEATURES = ["features", 10]
 
 MIN_YR = "min_year"
 MAX_YR = "max_year"
@@ -49,7 +48,6 @@ def clean_data(input_file: TextIO) -> Dict:
             EV_TYPE[CONSTANT]: info_list[EV_TYPE[INDEX]],
             SAFETY_RATING[CONSTANT]: float(info_list[SAFETY_RATING[INDEX]]),
             RANGE_CAPACITY[CONSTANT]: int(info_list[RANGE_CAPACITY[INDEX]]),
-            FEATURES[CONSTANT]: info_list[FEATURES[INDEX]]
         }
     return cars
 
@@ -63,7 +61,7 @@ def search_data(car_data: Dict, search: List[List]) -> List[str]:
         [price, {MIN_YR, MAX_YR}],
         [power, [HIGH_POWER, NORMAL_POWER, LOW_POWER]],
         [drivetrain, ["AWD", "FWD", "RWD"]],
-        [form_factors, ["SUV", "Sedan"]],
+        [form_factors, ["Compact", "Hatchback", "Large", "Mid-size", "Minivan", "Sedan", "Station Wagon", "Subcompact", "SUV"]],
         [years, {MIN_PRICE, MAX_PRICE}],
         [ev_type, ["PHEV", "BEV", "HFCV"]],
         [safety_rating, {MIN_RATING, MAX_RATING}],
@@ -76,15 +74,15 @@ def search_data(car_data: Dict, search: List[List]) -> List[str]:
         if specification == BRAND[CONSTANT]:
             car_models = update_car_models(get_models_from_brands(car_data, query), car_models)
         elif specification == YEAR[CONSTANT]:
-            car_models = update_car_models(get_models_from_years(car_data, query), car_models)     
+            car_models = update_car_models(get_models_from_years(car_data, query), car_models)
         #elif specification == POWER[CONSTANT]:
 
-        # elif specification == DRIVETRAIN[CONSTANT]:
-
-        # elif specification == FORM_FACTOR[CONSTANT]:
-
-        # elif specification == PRICE[CONSTANT]:
-
+        elif specification == DRIVETRAIN[CONSTANT]:
+            car_models = update_car_models(get_models_from_drivetrain(car_data, query), car_models)
+        elif specification == FORM_FACTOR[CONSTANT]:
+            car_models = update_car_models(get_models_from_form_factor(car_data, query), car_models)
+        elif specification == PRICE[CONSTANT]:
+            car_models = update_car_models(get_models_from_price(car_data, query), car_models)
         # elif specification == EV_TYPE[CONSTANT]:
 
         elif specification == SAFETY_RATING[CONSTANT]:
@@ -139,19 +137,40 @@ def get_models_from_drivetrain(car_data: Dict, drivetrain: List[str]) -> List[st
     '''
     drivetrain = ["AWD", "FWD", "RWD"]
     '''
-    pass
+    models_from_search_drivetrain = []
+
+    for model in car_data:
+        model_data = car_data[model]
+        if model_data[DRIVETRAIN[CONSTANT]] in drivetrain:
+                models_from_search_drivetrain.append(model)
+    
+    return models_from_search_drivetrain
 
 def get_models_from_form_factor(car_data: Dict, form_factors: List[str]) -> List[str]:
     '''
-    form_factors = ["SUV", "Sedan"]
+    form_factors = ["Compact", "Hatchback", "Large", "Mid-size", "Minivan", "Sedan", "Station Wagon", "Subcompact", "SUV"]
     '''
-    pass
+    models_from_search_form_factor = []
+
+    for model in car_data:
+        model_data = car_data[model]
+        if model_data[FORM_FACTOR[CONSTANT]] in form_factors:
+                models_from_search_form_factor.append(model)
+    
+    return models_from_search_form_factor
 
 def get_models_from_price(car_data: Dict, price: Dict[str, int]) -> List[str]:
     '''
-    years = {MIN_PRICE, MAX_PRICE}
+    price = {MIN_PRICE, MAX_PRICE}
     '''
-    pass
+    models_from_search_price = []
+
+    for model in car_data:
+        model_data = car_data[model]
+        if price[MIN_PRICE] <= model_data[PRICE[CONSTANT]] <= price[MAX_PRICE]:
+                models_from_search_price.append(model)
+    
+    return models_from_search_price
 
 def get_models_from_ev_type(car_data: Dict, ev_type: List[str]) -> List[str]:
     '''
@@ -185,14 +204,7 @@ def get_models_from_range(car_data: Dict, range_capacity: Dict[str, int]) -> Lis
     
     return models_from_search_range
 
-def get_models_from_features(car_data: Dict, years: Dict[str, int]) -> List[str]:
-    '''
-    
-    '''
-    pass
-
-
-database = open("FindYourEV\ev_database.csv")
+database = open("FindYourEV\ev_database.csv", "r")
 data = clean_data(database)
 # print(data)
 # print(get_models_from_brands(data, ["Audi", "Honda"]))
@@ -207,10 +219,26 @@ print(search_data(data, [
 print(search_data(data, [
     [BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]], 
     [YEAR[CONSTANT], {MIN_YR: 2020, MAX_YR: 2021}],
-    [RANGE_CAPACITY[CONSTANT], {MIN_RANGE: 300, MAX_RANGE: 400}]])
+    [PRICE[CONSTANT], {MIN_PRICE: 50000, MAX_PRICE: 100000}]])
     )
 print(search_data(data, [
     [BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]], 
-    [YEAR[CONSTANT], {MIN_YR: 2020, MAX_YR: 2021}], 
-    [SAFETY_RATING[CONSTANT], {MIN_RATING: 5, MAX_RATING: 5}]])
+    [YEAR[CONSTANT], {MIN_YR: 2020, MAX_YR: 2021}],
+    [DRIVETRAIN[CONSTANT], ["FWD"]]])
     )
+print(search_data(data, [
+    [BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]], 
+    [YEAR[CONSTANT], {MIN_YR: 2020, MAX_YR: 2021}],
+    [DRIVETRAIN[CONSTANT], ["FWD"]],
+    [FORM_FACTOR[CONSTANT], ["Compact", "Sedan", "Subcompact", "SUV"]]])
+    )
+# print(search_data(data, [
+#     [BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]], 
+#     [YEAR[CONSTANT], {MIN_YR: 2020, MAX_YR: 2021}],
+#     [RANGE_CAPACITY[CONSTANT], {MIN_RANGE: 300, MAX_RANGE: 400}]])
+#     )
+# print(search_data(data, [
+#     [BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]], 
+#     [YEAR[CONSTANT], {MIN_YR: 2020, MAX_YR: 2021}], 
+#     [SAFETY_RATING[CONSTANT], {MIN_RATING: 5, MAX_RATING: 5}]])
+#     )
