@@ -134,20 +134,25 @@
     var search_data = JSON.parse(localStorage.getItem("car_data"))
     console.log(search_data)
 
-    var i = 1
-    for (var key in search_data) {
-        document.getElementById("car_" + i + "_name").innerHTML = search_data[key].year + " " + search_data[key].brand + " " + key
-        document.getElementById("car_" + i + "_img").src = search_data[key].image
-        document.getElementById("car_" + i + "_price").innerHTML = "Price: $" + search_data[key].price
-        document.getElementById("car_" + i + "_ev_type").innerHTML = "Type: " + search_data[key].ev_type
-        document.getElementById("car_" + i + "_form_factor").innerHTML = "Form Factor: " + search_data[key].form_factor
-        document.getElementById("car_" + i + "_drivetrain").innerHTML = "Drivetrain: " + search_data[key].drivetrain
-        document.getElementById("car_" + i + "_safety").innerHTML = "Safety Rating: " + search_data[key].safety_rating + "/5 stars"
-        document.getElementById("car_" + i + "_range").innerHTML = "Range: " + search_data[key].range + "km"
-        document.getElementById("car_" + i + "_power").innerHTML = "Power: " + search_data[key].power + "HP"
+    if (search_data !== null) {
+        var i = 1
+        for (var key in search_data) {
+            document.getElementById("car_" + i + "_name").innerHTML = search_data[key].year + " " + search_data[key].brand + " " + key
+            document.getElementById("car_" + i + "_img").src = search_data[key].image
+            document.getElementById("car_" + i + "_price").innerHTML = "Price: $" + search_data[key].price
+            document.getElementById("car_" + i + "_ev_type").innerHTML = "Type: " + search_data[key].ev_type
+            document.getElementById("car_" + i + "_form_factor").innerHTML = "Form Factor: " + search_data[key].form_factor
+            document.getElementById("car_" + i + "_drivetrain").innerHTML = "Drivetrain: " + search_data[key].drivetrain
+            document.getElementById("car_" + i + "_safety").innerHTML = "Safety Rating: " + search_data[key].safety_rating + "/5 stars"
+            document.getElementById("car_" + i + "_range").innerHTML = "Range: " + search_data[key].range + "km"
+            document.getElementById("car_" + i + "_power").innerHTML = "Power: " + search_data[key].power + "HP"
 
-        i++
+            i++
+        }
     }
+
+    localStorage.removeItem("car_data")
+    
     
     </script>
 
