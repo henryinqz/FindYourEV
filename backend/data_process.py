@@ -26,7 +26,7 @@ def clean_data(input_file: TextIO) -> Dict:
         }
     return cars
 
-def search_data(car_data: Dict, search: List[List]) -> List[str]:
+def search_data(car_data: Dict, search: List[List]) -> Dict:
     '''
     Return a list of car models  that match search query.
 
@@ -43,29 +43,29 @@ def search_data(car_data: Dict, search: List[List]) -> List[str]:
         [range_capacity, {MIN_RANGE, MAX_RANGE}]
         ]
     ''' 
-    car_models = list(car_data.keys())
+    search_data = list(car_data.keys())
 
     for specification, query in search:
         if specification == BRAND[CONSTANT]:
-            car_models = update_car_models(get_models_from_brands(car_data, query), car_models)
+            search_data = update_car_models(get_models_from_brands(car_data, query), search_data)
         elif specification == YEAR[CONSTANT]:
-            car_models = update_car_models(get_models_from_years(car_data, query), car_models)
+            search_data = update_car_models(get_models_from_years(car_data, query), search_data)
         elif specification == POWER[CONSTANT]:
-            car_models = update_car_models(get_models_from_power(car_data, query), car_models)
+            search_data = update_car_models(get_models_from_power(car_data, query), search_data)
         elif specification == DRIVETRAIN[CONSTANT]:
-            car_models = update_car_models(get_models_from_drivetrain(car_data, query), car_models)
+            search_data = update_car_models(get_models_from_drivetrain(car_data, query), search_data)
         elif specification == FORM_FACTOR[CONSTANT]:
-            car_models = update_car_models(get_models_from_form_factor(car_data, query), car_models)
+            search_data = update_car_models(get_models_from_form_factor(car_data, query), search_data)
         elif specification == PRICE[CONSTANT]:
-            car_models = update_car_models(get_models_from_price(car_data, query), car_models)
+            search_data = update_car_models(get_models_from_price(car_data, query), search_data)
         elif specification == EV_TYPE[CONSTANT]:
-            car_models = update_car_models(get_models_from_ev_type(car_data, query), car_models)
+            search_data = update_car_models(get_models_from_ev_type(car_data, query), search_data)
         elif specification == SAFETY_RATING[CONSTANT]:
-            car_models = update_car_models(get_models_from_safety_rating(car_data, query), car_models)
-
+            search_data = update_car_models(get_models_from_safety_rating(car_data, query), search_data)
         elif specification == RANGE_CAPACITY[CONSTANT]:
-            car_models = update_car_models(get_models_from_range(car_data, query), car_models)
-    return car_models
+            search_data = update_car_models(get_models_from_range(car_data, query), search_data)
+
+    return get_data_from_model(car_data, search_data)
 
 def update_car_models(cars_with_search_query: List[str], car_models: List[str]) -> List[str]:
     searched_models = car_models.copy()
@@ -76,46 +76,37 @@ def update_car_models(cars_with_search_query: List[str], car_models: List[str]) 
 
     return searched_models # Change to searched_models.copy() if there are any bugs!
 
-def get_models_from_brands(car_data: Dict, brands: List[str]) -> dict:
+def get_models_from_brands(car_data: Dict, brands: List[str]) -> List[str]:
     '''
     brands = ["Audi", "Honda"]
     '''
     models_from_search_brands = []
-    models_dict = {}
 
     for model in car_data:
         model_data = car_data[model]
         if model_data["brand"] in brands:
                 models_from_search_brands.append(model)
+    
+    return models_from_search_brands
 
-    for model in models_from_search_brand:
-        models_dict[model] = car_data[model]
- 
-    return models_dict
-
-def get_models_from_years(car_data: Dict, years: Dict[str, int]) -> dict:
+def get_models_from_years(car_data: Dict, years: Dict[str, int]) -> List[str]:
     '''
     years = {MIN_YEAR, MAX_YEAR}
     '''
     models_from_search_years = []
-    models_dict = {}
 
     for model in car_data:
         model_data = car_data[model]
         if years[MIN_YR] <= model_data[YEAR[CONSTANT]] <= years[MAX_YR]:
                 models_from_search_years.append(model)
     
-    for model in models_from_search_years:
-        models_dict[model] = car_data[model]
- 
-    return models_dict
+    return models_from_search_years
 
-def get_models_from_power(car_data: Dict, power: int) -> dict:
+def get_models_from_power(car_data: Dict, power: int) -> List[str]:
     '''
     power = [HIGH_POWER, NORMAL_POWER, LOW_POWER]
     '''
     models_from_search_power = []
-    models_dict = {}
 
     for model in car_data:
         model_data = car_data[model]
@@ -131,115 +122,95 @@ def get_models_from_power(car_data: Dict, power: int) -> dict:
             elif power_level == LOW_POWER and LOW_POWER <= model_data[POWER[CONSTANT]] < NORMAL_POWER:
                 models_from_search_power.append(model)
     
-    for model in models_from_search_power:
-        models_dict[model] = car_data[model]
- 
-    return models_dict
+    return models_from_search_power
 
-def get_models_from_drivetrain(car_data: Dict, drivetrain: List[str]) -> dict:
+def get_models_from_drivetrain(car_data: Dict, drivetrain: List[str]) -> List[str]:
     '''
     drivetrain = ["AWD", "FWD", "RWD"]
     '''
     models_from_search_drivetrain = []
-    models_dict = {}
 
     for model in car_data:
         model_data = car_data[model]
         if model_data[DRIVETRAIN[CONSTANT]] in drivetrain:
                 models_from_search_drivetrain.append(model)
     
-    for model in models_from_search_drivetrain:
-        models_dict[model] = car_data[model]
- 
-    return models_dict
+    return models_from_search_drivetrain
 
-def get_models_from_form_factor(car_data: Dict, form_factors: List[str]) -> dict:
+def get_models_from_form_factor(car_data: Dict, form_factors: List[str]) -> List[str]:
     '''
     form_factors = ["Compact", "Hatchback", "Large", "Mid-size", "Minivan", "Sedan", "Station Wagon", "Subcompact", "SUV"]
     '''
     models_from_search_form_factor = []
-    models_dict = {}
 
     for model in car_data:
         model_data = car_data[model]
         if model_data[FORM_FACTOR[CONSTANT]] in form_factors:
                 models_from_search_form_factor.append(model)
     
-    for model in models_from_search_form_factor:
-        models_dict[model] = car_data[model]
- 
-    return models_dict
+    return models_from_search_form_factor
 
-def get_models_from_price(car_data: Dict, price: Dict[str, int]) -> dict:
+def get_models_from_price(car_data: Dict, price: Dict[str, int]) -> List[str]:
     '''
     price = {MIN_PRICE, MAX_PRICE}
     '''
     models_from_search_price = []
-    models_dict = {}
 
     for model in car_data:
         model_data = car_data[model]
         if price[MIN_PRICE] <= model_data[PRICE[CONSTANT]] <= price[MAX_PRICE]:
                 models_from_search_price.append(model)
     
-    for model in models_from_search_price:
-        models_dict[model] = car_data[model]
- 
-    return models_dict
+    return models_from_search_price
 
-def get_models_from_ev_type(car_data: Dict, ev_type: List[str]) -> dict:
+def get_models_from_ev_type(car_data: Dict, ev_type: List[str]) -> List[str]:
     '''
     ev_type = ["PHEV", "BEV", "HFCV"]
     '''
     models_from_search_ev_type = []
-    models_dict = {}
 
     for model in car_data:
         model_data = car_data[model]
         if model_data[EV_TYPE[CONSTANT]] in ev_type:
                 models_from_search_ev_type.append(model)
     
-    for model in models_from_search_ev_type:
-        models_dict[model] = car_data[model]
- 
-    return models_dict
+    return models_from_search_ev_type
 
-def get_models_from_safety_rating(car_data: Dict, safety_rating: Dict[str, int]) -> dict:
+def get_models_from_safety_rating(car_data: Dict, safety_rating: Dict[str, int]) -> List[str]:
     '''
     safety_rating = {MIN_RATING, MAX_RATING}
     '''
     models_from_search_safety = []
-    models_dict = {}
     
     for model in car_data:
         model_data = car_data[model]
         if safety_rating[MIN_RATING] <= model_data[SAFETY_RATING[CONSTANT]] <= safety_rating[MAX_RATING]:
             models_from_search_safety.append(model)
     
-    for model in models_from_search_safety:
-        models_dict[model] = car_data[model]
- 
-    return models_dict
+    return models_from_search_safety
 
-def get_models_from_range(car_data: Dict, range_capacity: Dict[str, int]) -> dict:
+def get_models_from_range(car_data: Dict, range_capacity: Dict[str, int]) -> List[str]:
     '''
     range_capacity = {MIN_RANGE, MAX_RANGE}
     '''
     models_from_search_range = []
-    models_dict = {}
 
     for model in car_data:
         model_data = car_data[model]
         if range_capacity[MIN_RANGE] <= model_data[RANGE_CAPACITY[CONSTANT]] <= range_capacity[MAX_RANGE]:
             models_from_search_range.append(model)
     
-    for model in models_from_search_range:
-        models_dict[model] = car_data[model]
- 
-    return models_dict
+    return models_from_search_range
 
 def get_random_cars_from_search_data(search_data: List[str], num_results: int) -> List[str]:
     if num_results > len(search_data):
         num_results = len(search_data)
         
     return random.sample(search_data, num_results)
+
+def get_data_from_model(car_data: List[str], search_data: List[str]) -> Dict:
+    search_data_dict = {}
+    for model in search_data:
+        search_data_dict[model] = car_data[model]
+
+    return search_data_dict

@@ -20,6 +20,19 @@ if __name__ == "__main__":
     #     [YEAR[CONSTANT], {MIN_YR: 2020, MAX_YR: 2021}],
     #     [POWER[CONSTANT], [HIGH_POWER]]])
     #     )
+
+    # print(data_process.get_data_from_model(data, data_process.search_data(data, [
+    #     [BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]], 
+    #     [YEAR[CONSTANT], {MIN_YR: 2020, MAX_YR: 2021}]])
+    #     ))
+    # print(data_process.get_data_from_model(data, data_process.search_data(data, [
+    #     [BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]], 
+    #     [YEAR[CONSTANT], {MIN_YR: 2020, MAX_YR: 2021}],
+    #     [POWER[CONSTANT], [HIGH_POWER]]])
+    #     ))
+
+
+    
     # print(data_process.search_data(data, [
     #     [BRAND[CONSTANT], ["Audi", "Honda", "Toyota"]], 
     #     [YEAR[CONSTANT], {MIN_YR: 2020, MAX_YR: 2021}],

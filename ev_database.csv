@@ -1,65 +1,65 @@
 Brand,Model,Year,Power,Drivetrain,Form Factor,Price,Type,Safety Rating,Range,Picture
-Audi,e-tron 55 quattro,2021,408,AWD,SUV,88850,BEV,5,355,
-Audi,A3 e-tron,2019,204,AWD,SUV,42125,PHEV,4,0,
-Audi,Q5 TFSI e,2020,362,AWD,SUV,73100,PHEV,4.5,647,
-Audi,A8 ,2021,443,AWD,Sedan,0,PHEV,0,0,
-Bentley,Bentayga,2021,443,AWD,SUV,168100,PHEV,5,0,
-BMW,i3,2021,170,RWD,Hatchback,57543,BEV,4,235,
-BMW,i3,2021,170,RWD,Hatchback,57543,PHEV,4,235,
-BMW,i3s,2021,184,RWD,Hatchback,61681,BEV,4,195,
-BMW,i3s,2021,184,RWD,Hatchback,61681,PHEV,4,195,
-BMW,i8,2020,369,AWD,Subcompact,189117,PHEV,5,100,
-BMW,X3 ,2021,382,AWD,SUV,73350,PHEV,5,598,
-BMW,530e,2021,180,AWD,Mid-size,72847,PHEV,5,533,
-BMW,530Xe,2021,184,AWD,Mid-size,71573,PHEV,5,595,
-BMW,330Xe,2021,300,AWD,Sedan,59284,PHEV,5,490,
-Fiat Chrysler,Pacifica,2020,287,AWD,Minivan,54885,PHEV,0,580,
-Fiat Chrysler,Fiat 500 Cabrio,2019,118,FWD,Hatchback,46000,BEV,4,135,
-Ferrari,SF 90 Stradale,2021,986,FWD,Sports,795972,PHEV,4,210,
-Ford,Fusion,2020,181,FWD,Mid-Size,47752,PHEV,5,610,
-Ford,Escape,2020,181,FWD,SUV,35475,PHEV,5,643,
-Ford,Mustang Mach-E,2021,266,RWD,SUV,56030,BEV,5,337,
-General Motors,Chevrolet Volt,2019,149,FWD,Compact,49662,PHEV,5,675,
-General Motors,Chevrolet Bolt,2020,200,FWD,Station Wagon,53356,BEV,5,416,
-Honda,Clarity,2021,181,FWD,Sedan,43752,PHEV,0,540,
-Honda,Clarity,2021,181,FWD,Sedan,0,BEV,0,0,
-Honda,Clarity,2021,181,FWD,Sedan,0,HFCV,0,0,
-Hyundai,Sonata ,2019,185,FWD,SUV,30000,PHEV,5,481,
-Hyundai,IONIQ,2021,313,AWD,SUV,60718,PHEV,4,0,
-Hyundai,KONA,2021,204,FWD,SUV,62989,BEV,4.5,360,
-Hyundai,NEXO,2021,160,FWD,SUV,73000,HFCV,5,570,
-Jaguar,I-PACE,2021,400,AWD,SUV,113597,BEV,5,226,
-Karma,Revero,2020,403,RWD,Sedan,169000,PHEV,4,482,
-Kia,Niro ,2020,204,FWD,SUV,59417,BEV,4,310,
-Kia,Niro ,2020,204,FWD,SUV,59417,PHEV,0,310,
-Kia,Optima,2020,185,FWD,Large,35857,PHEV,4,800,
-Kia,Soul EV Luxury,2021,109,FWD,Station Wagon,44504,BEV,4,178,
-Kia,Soul EV Luxury,2020,109,FWD,Station Wagon,50808,BEV,4,178,
-Land Rover,Range Rover,2021,395,AWD,Large,124171,PHEV,4,840,
-Land Rover,Range Rover Sport,2021,254,AWD,Large,97236,PHEV,4,803,
-Lincoln,Aviator,2021,400,AWD,SUV,114111,PHEV,4,300,
-MINI,Countryman,2021,221,AWD,Mid-Size,48077,PHEV,4,27,
-MINI,Cooper SE,2021,184,FWD,Hatchback,43543,BEV,4,155,
-Mitsubishi,Outlander,2020,117,AWD,Mid-size,66222,PHEV,4,35,
-Nissan,Leaf,2021,147,FWD,Mid-size,41477,BEV,5,363,
-Polestar,2,2021,402,AWD,Hatchback,69900,PHEV,5,374,
-Porsche,Cayenne,2020,455,AWD,SUV,105896,PHEV,5,0,
-Porsche,Panamera,2020,457,AWD,Large,150598,PHEV,5,23,
-Porsche,Taycan,2020,522,AWD,Sedan,237326,PHEV,5,643,
-Smart,Fortwo,2019,89,RWD,Small,36996,BEV,4,101,
-Subaru,Crosstrek SUV,2020,148,AWD,SUV,46351,PHEV,5,772,
-Tesla,Model S,2020,534,AWD,Large,89938,BEV,5,646,
-Tesla,Model X,2020,534,AWD,SUV,103400,BEV,5,549,
-Tesla,Model 3,2020,480,RWD,Mid-size,49911,BEV,5,423,
-Tesla,Model Y,2020,480,AWD,SUV,65193,BEV,5,525,
-Toyota,Prius Prime,2021,121,FWD,Mid-size,37207,PHEV,5,40,
-Toyota,Mirai,2020,151,FWD,Subcompact,75834,HFCV,5,502,
-Toyota,RAV4 Prime,2021,302,AWD,SUV,44990,BEV,5,67,
-Volkswagen,e-Golf,2020,134,FWD,Compact,50675,BEV,5,201,
-Volvo,XC90,2021,316,AWD,SUV,49995,PHEV,4.5,526,
-Volvo,XC90 T8,2021,313,AWD,SUV,71245,PHEV,5,529,
-Volvo,XC60,2021,250,AWD,SUV,52495,PHEV,5,526,
-Volvo,XC60 T8,2021,415,AWD,SUV,70495,PHEV,5,561,
-Volvo,S90 T8,2021,313,AWD,Mid-Size,74950,PHEV,5,625,
-Volvo,S60 T8,2021,313,AWD,Compact,51645,PHEV,5,725,
-Volvo,V60 T8,2021,415,AWD,Station Wagon,68295,PHEV,5,781,
+Audi,e-tron 55 quattro,2021,408,AWD,SUV,88850,BEV,5,355,https://evchargeplus.com/wp-content/uploads/2019/11/Audi-e-tron-quattro-00.png
+Audi,A3 e-tron,2019,204,AWD,SUV,42125,PHEV,4,0,https://www.pngitem.com/pimgs/m/182-1821654_audi-e-tron-prestige-hd-png-download.png
+Audi,Q5 TFSI e,2020,362,AWD,SUV,73100,PHEV,4.5,647,https://bioage.typepad.com/.a/6a00d8341c4fbe53ef026be419e578200d-600wi
+Audi,A8 ,2021,443,AWD,Sedan,0,PHEV,0,0,https://images.dealer.com/ddc/vehicles/2021/Audi/A8/Sedan/perspective/front-left/2021_76.png
+Bentley,Bentayga,2021,443,AWD,SUV,168100,PHEV,5,0,"https://cdn.static-carindigo.com/tr:w-400,h-215,ow-39.62962962963,oi-carindigo@images@carindigo_logo_white.png,ox-10,oy-10,di-no_image_SJKGShVtN.png/images/car/Bentley/old_Bentley_Bentayga_2021_SUV_5f29076f95b3b.png"
+BMW,i3,2021,170,RWD,Hatchback,57543,BEV,4,235,https://static1.squarespace.com/static/55fdc875e4b0ef39e07200ed/55fdc8f6e4b0f97d395881f0/5f96409a8cd4814a3dd07012/1604896133497/2020-BMW-i3.png?format=1500w
+BMW,i3,2021,170,RWD,Hatchback,57543,PHEV,4,235,https://static1.squarespace.com/static/55fdc875e4b0ef39e07200ed/55fdc8f6e4b0f97d395881f0/5f96409a8cd4814a3dd07012/1604896133497/2020-BMW-i3.png?format=1500w
+BMW,i3s,2021,184,RWD,Hatchback,61681,BEV,4,195,"https://cache.bmwusa.com/cosy.arox?pov=walkaround&client=byo&vehicle=21IA&paint=P0B85&brand=WBBI&sa=S02G6,S02G6,S0322,S03AG,S0508&fabric=FBHGI&RESP=PNG&quality=90&width=800&sharpness=100&BKGND=TRANSPARENT&angle=60"
+BMW,i3s,2021,184,RWD,Hatchback,61681,PHEV,4,195,"https://cache.bmwusa.com/cosy.arox?pov=walkaround&client=byo&vehicle=21IA&paint=P0B85&brand=WBBI&sa=S02G6,S02G6,S0322,S03AG,S0508&fabric=FBHGI&RESP=PNG&quality=90&width=800&sharpness=100&BKGND=TRANSPARENT&angle=60"
+BMW,i8,2020,369,AWD,Subcompact,189117,PHEV,5,100,https://smartcdn.prod.postmedia.digital/driving/wp-content/uploads/2020/05/chrome-image-412413.png
+BMW,X3 ,2021,382,AWD,SUV,73350,PHEV,5,598,https://thebmwstore.ca/sites/default/files/styles/inventory_gallery_960/public/assets/vehicle/photo/new/2021/bmw/x3/cc_2021BMS200017_01_1280_300.png?itok=lp-WDzOQ
+BMW,530e,2021,180,AWD,Mid-size,72847,PHEV,5,533,https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2021BMC84_640/2021BMC840001_640_01.png
+BMW,530Xe,2021,184,AWD,Mid-size,71573,PHEV,5,595,https://carimages.d2cmedia.ca/newcarimages/BMW/5%20Series%20Hybrid/2021//415658/White/front45.png
+BMW,330Xe,2021,300,AWD,Sedan,59284,PHEV,5,490,https://s.aolcdn.com/commerce/autodata/images/USD10BMC711A021001.jpg
+Fiat Chrysler,Pacifica,2020,287,AWD,Minivan,54885,PHEV,0,580,https://medias.fcacanada.ca/jellies/renditions/2020/800x510/CC20_RUCL53_2DE_PAU_APA_XXX_XXX_XXX.41e6b4ea48e980bc39461795a2eebe23.png
+Fiat Chrysler,Fiat 500 Cabrio,2019,118,FWD,Hatchback,46000,BEV,4,135,"https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_large/v1/editorial/Fiat_500_2018_white_1.jpg"
+Ferrari,SF 90 Stradale,2021,986,FWD,Sports,795972,PHEV,4,210,https://static.tcimg.net/vehicles/primary/efabcab28922d666/2020-Ferrari-SF90_Stradale-white-full_color-driver_side_front_quarter.png
+Ford,Fusion,2020,181,FWD,Mid-Size,47752,PHEV,5,610,https://images.dealer.com/ddc/vehicles/2020/Ford/Fusion%20Hybrid/Sedan/perspective/front-left/0020_24.png
+Ford,Escape,2020,181,FWD,SUV,35475,PHEV,5,643,https://images.dealer.com/ddc/vehicles/2020/Ford/Escape/SUV/perspective/front-left/2020_24.png
+Ford,Mustang Mach-E,2021,266,RWD,SUV,56030,BEV,5,337,https://www.ford.ca/ntzlibs/content/dam/bev/ca/mache/adplanners/large/21_frd_cx727_slt_icsl_reveal_ps34.png.renditions.original.png
+General Motors,Chevrolet Volt,2019,149,FWD,Compact,49662,PHEV,5,675,https://www.motortrend.com/uploads/sites/10/2018/10/2019-chevrolet-volt-lt-5door-hatchback-angular-front.png
+General Motors,Chevrolet Bolt,2020,200,FWD,Station Wagon,53356,BEV,5,416,"https://cdn.static-carindigo.com/tr:w-400,h-215,ow-39.62962962963,oi-carindigo@images@carindigo_logo_white.png,ox-10,oy-10,di-no_image_SJKGShVtN.png/images/car/Chevrolet/old_Chevrolet_Bolt_EV_2021_Hatchback_5f4cc28c77ce5.jpg"
+Honda,Clarity,2021,181,FWD,Sedan,43752,PHEV,0,540,https://www.pngjoy.com/pngm/77/1660171_honda-2018-honda-clarity-plug-in-hybrid-sedan.png
+Honda,Clarity,2021,181,FWD,Sedan,43752,BEV,0,0,https://www.pngjoy.com/pngm/77/1660171_honda-2018-honda-clarity-plug-in-hybrid-sedan.png
+Honda,Clarity,2021,181,FWD,Sedan,43752,HFCV,0,0,https://www.pngjoy.com/pngm/77/1660171_honda-2018-honda-clarity-plug-in-hybrid-sedan.png
+Hyundai,Sonata ,2019,185,FWD,SUV,30000,PHEV,5,481,https://www.pngitem.com/pimgs/m/224-2244750_hyundai-sonata-2019-price-hd-png-download.png
+Hyundai,IONIQ,2021,313,AWD,SUV,60718,PHEV,4,0,https://smartcdn.prod.postmedia.digital/driving/wp-content/uploads/2020/03/chrome-image-412359.png
+Hyundai,KONA,2021,204,FWD,SUV,62989,BEV,4.5,360,https://images.dealer.com/ddc/vehicles/2021/Hyundai/Kona/SUV/perspective/front-left/2021_24.png
+Hyundai,NEXO,2021,160,FWD,SUV,73000,HFCV,5,570,https://imageonthefly.autodatadirect.com/images/?IMG=USC90HYS171A021001.png&HEIGHT=496&WIDTH=751
+Jaguar,I-PACE,2021,400,AWD,SUV,113597,BEV,5,226,https://smartcdn.prod.postmedia.digital/driving/wp-content/uploads/2019/03/chrome-image-399655.png
+Karma,Revero,2020,403,RWD,Sedan,169000,PHEV,4,482,https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2020KAC02_640/2020KAC020001_640_01.png
+Kia,Niro ,2020,204,FWD,SUV,59417,BEV,4,310,https://pngimg.com/uploads/kia/kia_PNG53.png
+Kia,Niro ,2020,204,FWD,SUV,59417,PHEV,0,310,https://pngimg.com/uploads/kia/kia_PNG53.png
+Kia,Optima,2020,185,FWD,Large,35857,PHEV,4,800,https://www.kia.ca/content/vehicles/2020vmp/2020-optimahybrid/jellybeans/jellybean-aurorablack-mobile.png
+Kia,Soul EV ,2021,109,FWD,Station Wagon,44504,BEV,4,178,https://di-uploads-pod1.s3.amazonaws.com/carriagekia/uploads/2014/11/kia-soul-ev1.png
+Kia,Soul EV Luxury,2020,109,FWD,Station Wagon,50808,BEV,4,178,https://www.fosterkia.com/wp-content/uploads/2019/04/soulev.jpg
+Land Rover,Range Rover,2021,395,AWD,Large,124171,PHEV,4,840,https://lh3.googleusercontent.com/proxy/ulUD8152Z5i0Hs0rGu7yClZOPm_5jEfFY7G_i_fhMpPFvbSdtq5IIk3wvYSkBJVng_Hst0uGmA07Fb-roddwMrVi2iti6fKPy7bgyfnfOlLorfJ_P2R9_3AXxA
+Land Rover,Range Rover Sport,2021,254,AWD,Large,97236,PHEV,4,803,https://lh3.googleusercontent.com/proxy/aOGFK-9Hli8YBMy2brXObDqbiFerWXTu8wt6aPBckjJ7hEAhHRVr336JyJ5IK_0WXAZ2l65wUJhe6iXfP6QFHi9MPi3HnbqxdbFAxqA0R-hs6_rDw2j4nshG2E4FM-CuOLE
+Lincoln,Aviator,2021,400,AWD,SUV,114111,PHEV,4,300,https://images.dealer.com/ddc/vehicles/2020/Lincoln/Aviator/SUV/perspective/front-left/2000_24.png
+MINI,Countryman,2021,221,AWD,Mid-Size,48077,PHEV,4,27,"https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_default/v1/editorial/vhs/Mini-Countryman_0.png"
+MINI,Cooper SE,2021,184,FWD,Hatchback,43543,BEV,4,155,https://www.motortrend.com/uploads/sites/5/2020/06/2020-mini-cooper-se-1.png?fit=around%7C875:492.1875
+Mitsubishi,Outlander,2020,117,AWD,Mid-size,66222,PHEV,4,35,https://images.dealer.com/ddc/vehicles/2020/Mitsubishi/Outlander%20PHEV/SUV/perspective/front-left/2020_24.png
+Nissan,Leaf,2021,147,FWD,Mid-size,41477,BEV,5,363,"https://cdn.static-carindigo.com/tr:w-400,h-215,ow-39.62962962963,oi-carindigo@images@carindigo_logo_white.png,ox-10,oy-10,di-no_image_SJKGShVtN.png/images/car/Nissan/old_Nissan_Leaf_2021_Hatchback_5f3cc359a06e9.jpg"
+Polestar,2,2021,402,AWD,Hatchback,69900,PHEV,5,374,"https://crdms.images.consumerreports.org/c_lfill,w_720,q_auto,f_auto/prod/cars/cr/model-years/10155-2021-polestar-2"
+Porsche,Cayenne,2020,455,AWD,SUV,105896,PHEV,5,0,https://assets.stickpng.com/images/580b585b2edbce24c47b2ca8.png
+Porsche,Panamera,2020,457,AWD,Large,150598,PHEV,5,23,https://assets.stickpng.com/images/580b585b2edbce24c47b2cae.png
+Porsche,Taycan,2020,522,AWD,Sedan,237326,PHEV,5,643,https://static.tcimg.net/vehicles/primary/84fd625c9a9ece6b/2020-Porsche-Taycan-white-full_color-driver_side_front_quarter.png
+Smart,Fortwo,2019,89,RWD,Small,36996,BEV,4,101,https://www.pngitem.com/pimgs/m/365-3651114_smart-fortwo-png-transparent-png.png
+Subaru,Crosstrek SUV,2020,148,AWD,SUV,46351,PHEV,5,772,https://www.pngkit.com/png/full/90-902107_2019-subaru-crosstrek-suv-subaru-crosstrek-2018-png.png
+Tesla,Model S,2020,534,AWD,Large,89938,BEV,5,646,https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/screen-shot-2020-02-15-at-9-54-16-am-1581782098.png
+Tesla,Model X,2020,534,AWD,SUV,103400,BEV,5,549,https://crls.io/s/evox%2Fcolor_2400_032_png%2FMY2019%2F13720%2F13720_cc2400_032_PBSB.png/feature/n/tesla-model-x.png
+Tesla,Model 3,2020,480,RWD,Mid-size,49911,BEV,5,423,https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2020TSC03_640/2020TSC030001_640_01.png
+Tesla,Model Y,2020,480,AWD,SUV,65193,BEV,5,525,https://file.kelleybluebookimages.com/kbb/base/evox/CP/14481/2020-Tesla-Model%20Y-front_14481_032_2400x1800_PPSW.png
+Toyota,Prius Prime,2021,121,FWD,Mid-size,37207,PHEV,5,40,https://cars.usnews.com/static/images/Auto/izmo/i146586704/2020_toyota_prius_prime_angularfront.jpg
+Toyota,Mirai,2020,151,FWD,Subcompact,75834,HFCV,5,502,https://www.pngitem.com/pimgs/m/92-929019_2020-toyota-mirai-png-transparent-png.png
+Toyota,RAV4 Prime,2021,302,AWD,SUV,44990,BEV,5,67,"https://crdms.images.consumerreports.org/c_lfill,w_720,q_auto,f_auto/prod/cars/cr/model-years/11198-2021-toyota-rav4-prime"
+Volkswagen,e-Golf,2020,134,FWD,Compact,50675,BEV,5,201,https://evchargeplus.com/wp-content/uploads/2020/01/volkswagen-egolf-evchargeplus-00-800x429.png
+Volvo,XC90,2021,316,AWD,SUV,49995,PHEV,4.5,526,https://i.pinimg.com/originals/1e/4b/67/1e4b679aa4fa6a8f6ebd3c626a419852.png
+Volvo,XC90 T8,2021,313,AWD,SUV,71245,PHEV,5,529,https://img.favpng.com/17/12/21/2016-volvo-xc90-hybrid-t8-inscription-electric-vehicle-volvo-cars-png-favpng-yf2g1pd29H90g3D1Xt5pvGRM9.jpg
+Volvo,XC60,2021,250,AWD,SUV,52495,PHEV,5,526,https://www.pngitem.com/pimgs/m/99-993243_volvo-xc60-2019-hd-png-download.png
+Volvo,XC60 T8,2021,415,AWD,SUV,70495,PHEV,5,561,https://evchargeplus.com/wp-content/uploads/2020/01/volvo-xc60-t8-evchargeplus-00-800x531.png
+Volvo,S90 T8,2021,313,AWD,Mid-Size,74950,PHEV,5,625,https://evchargeplus.com/wp-content/uploads/2020/01/T8_Volvo_S90-evchargeplus-00-800x600.png
+Volvo,S60 T8,2021,313,AWD,Compact,51645,PHEV,5,725,https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2019VOC34_640/2019VOC340017_640_01.png
+Volvo,V60 T8,2021,415,AWD,Station Wagon,68295,PHEV,5,781,https://smartcdn.prod.postmedia.digital/driving/wp-content/uploads/2020/02/chrome-image-407796.png
