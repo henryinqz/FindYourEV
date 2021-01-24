@@ -1,9 +1,17 @@
-body {background-image: url('purpleback.png');}
+body {
+    background-image: url('purpleback.png');
 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 h1{ 
 
     font-family: 'Open Sans', sans-serif;
     font-size: 75px;
+    font-weight:500;
     
     
     color: #570a3d;
@@ -12,6 +20,9 @@ h2{
     font-family: 'Open Sans', sans-serif;
     color: #570a3d;
     font-size:30;
+    font-weight:500;
+    position:relative;
+    bottom:50px;
 }
 
 
@@ -53,7 +64,8 @@ p{
     text-decoration: none;
     font-size: 25px;
     position: relative;
-    bottom:560px
+    top:200px;
+    right:50px;
 
 }
 
@@ -68,14 +80,14 @@ p{
 .brandsbutton{
     color:white;
     background: #570a3d;
-    padding: 7px;
-    border-radius: 4px;
+    padding: 8px;
+    border-radius: 5px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
     font-size: 25px;
     position: relative;
-    top: 280px;
-    left: 5px;
+    top: 171px;
+    left: 40px;
 }
 
 .brandsbutton:hover {
@@ -86,48 +98,96 @@ p{
     pox-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 }
 
-.power{
-
-    position:relative;
-    right:400px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size:30px;
-}
-
-.formfactor{
-
-    position:relative;
+.dropdown{
+    height:10vh;
     
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size:30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:500;
+    width: 100%;
+    margin: auto;
 }
-.price{
 
-    position:relative;
-    left:330px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size:30px;
+.power, .forfactor, .price, .electrictype, .safetyrating, .range{
+    position: relative;
 }
-.electrictype{
 
-    position:relative;
-    right:400px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size:30px;
+.power ul, .formfactor ul, .price ul, .electrictype ul, .safetyrating ul, .range ul{
+    position:absolute;
+    background: white;
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
 }
-.safetyrating{
 
-    position:relative;
+.power li, .formfactor li, .price li, .electrictype li, .safetyrating li, .range li{
+
+    color:black;
+    text-decoration: none;
     
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size:30px;
-    right:50px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 5px;
 }
-.range{
 
-    position:relative;
-  
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size:30px;
-    left:280px;
+.power li:hover, .formfactor li:hover, .price li:hover, .electrictype li:hover, .safetyrating li:hover, .range li:hover{
+    background-color: #dfddde;
+}
+
+.dropdown button{
+
+    background:none;
+    border: none;
+    
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+.dropdown button:hover{
+    color: purple;
+}
+
+.power button:focus + ul {
+    opacity:1;
+    pointer-events: all;
+}
+
+.formfactor button:focus + ul {
+    opacity:1;
+    pointer-events: all;
+}
+
+.price button:focus + ul {
+    opacity:1;
+    pointer-events: all;
+}
+
+.electrictype button:focus + ul {
+    opacity:1;
+    pointer-events: all;
+}
+
+.safetyrating button:focus + ul {
+    opacity:1;
+    pointer-events: all;
+}
+
+.range button:focus + ul {
+    opacity:1;
+    pointer-events: all;
 }
