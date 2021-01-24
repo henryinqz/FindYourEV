@@ -25,7 +25,7 @@ def clean_data(input_file: TextIO) -> Dict:
         }
     return cars
 
-def search_data(car_data: Dict, search: List[List]) -> Dict:
+def search_data(car_data: Dict, search: List[List]) -> List[str]:
     '''
     Return a list of car models  that match search query.
 
@@ -64,7 +64,7 @@ def search_data(car_data: Dict, search: List[List]) -> Dict:
         elif specification == RANGE_CAPACITY[CONSTANT]:
             search_data = update_car_models(get_models_from_range(car_data, query), search_data)
 
-    return get_data_from_model(car_data, search_data)
+    return search_data
 
 def update_car_models(cars_with_search_query: List[str], car_models: List[str]) -> List[str]:
     searched_models = car_models.copy()
