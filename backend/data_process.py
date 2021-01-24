@@ -1,8 +1,6 @@
 from typing import TextIO, List, Dict, Union
 import random
-from constants import (CONSTANT, INDEX, 
-BRAND, MODEL, YEAR, POWER, DRIVETRAIN, FORM_FACTOR, PRICE, EV_TYPE, SAFETY_RATING, RANGE_CAPACITY, 
-MIN_YR, MAX_YR, HIGH_POWER, NORMAL_POWER, LOW_POWER, MIN_PRICE, MAX_PRICE, MIN_RATING, MAX_RATING, MIN_RANGE, MAX_RANGE)
+from constants import *
 
 def clean_data(input_file: TextIO) -> Dict:
     input_file.readline().strip().split(",") # First row
@@ -23,6 +21,7 @@ def clean_data(input_file: TextIO) -> Dict:
             EV_TYPE[CONSTANT]: info_list[EV_TYPE[INDEX]],
             SAFETY_RATING[CONSTANT]: float(info_list[SAFETY_RATING[INDEX]]),
             RANGE_CAPACITY[CONSTANT]: int(info_list[RANGE_CAPACITY[INDEX]]),
+            IMAGE[CONSTANT]: info_list[IMAGE[INDEX]]
         }
     return cars
 

@@ -10,6 +10,7 @@ PRICE = ["price", 6]
 EV_TYPE = ["ev_type", 7]
 SAFETY_RATING = ["safety_rating", 8]
 RANGE_CAPACITY = ["range", 9]
+IMAGE = ["image", 10]
 
 MIN_YR = "min_year"
 MAX_YR = "max_year"
