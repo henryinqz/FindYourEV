@@ -8,34 +8,80 @@
 </head>
 <body style="text-align: center; margin-top: 2%;margin-bottom: 2%;margin-left: 5%;margin-right: 5%margin-left: 5%;margin-right: 5%">
     
+    
+  
     <br><br><br><br><br><br><br><br><br>
     
-    <div style="text-align: center;">
-        
+    <div >
+        <nav>
+            <div class="dropdown">
+                <div class="power">
+                    <button>Power</button>
+                    <ul>
+                        <li>Weak<input type="checkbox" name="attributes_car" value="1" id="power" class ="power"></li>
+                        <li>Medium<input type="checkbox" name="attributes_car" value="2" id="power" class ="power"></li>
+                        <li>Strong<input type="checkbox" name="attributes_car" value="3" id="power" class ="power"></li>
+                    </ul>
+                </div>
+
+                <div class="formfactor">
+                    <button>Form Factor</button>
+                    <ul>
+                        <li>AWD<input type="checkbox" name="attributes_car" value="1" id="formfactor" class ="formfactor"></li>
+                        <li>FWD<input type="checkbox" name="attributes_car" value="2" id="formfactor" class ="formfactor"></li>
+                        <li>BWD<input type="checkbox" name="attributes_car" value="3" id="formfactor" class ="formfactor"></li>
+                    </ul>
+                </div>
+
+                <div class="price">
+                    <buttonc>Price</button>
+                    <ul>
+                        <li>0-50000<input type="checkbox" name="attributes_car" value="1" id="price" class ="price"></li>
+                        <li>50000-100000<input type="checkbox" name="attributes_car" value="2" id="price" class ="price"></li>
+                        <li>100000-200000<input type="checkbox" name="attributes_car" value="3" id="price" class ="price"></li>
+                        
+                    </ul>
+                </div>
+
+                <div class="electrictype">
+                    <button>Electric/Hybrid</button>
+                    <ul>
+                        <li>Electric<input type="checkbox" name="attributes_car" value="1" id="electric_type" class ="electrictype"></li>
+                        <li>Hybrid<input type="checkbox" name="attributes_car" value="2" id="electric_type" class ="electrictype"></li>
+                    </ul>
+                </div>
+
+                <div class="safetyrating">
+                    <button>Safety Rating</button>
+                    <ul>
+                        <li>Only 5<input type="checkbox" name="attributes_car" value="1" id="safety_rating" class ="safetyrating"></li>
+                        <li>3 and up<input type="checkbox" name="attributes_car" value="2" id="safety_rating" class ="safetyrating"></li>
+                        <li>Any<input type="checkbox" name="attributes_car" value="3" id="safety_rating" class ="safety_rating"></li>
+                    </ul>
+                </div>
+
+                <div class="range">
+                    <button>Range</button>
+                    <ul>
+                        <li>0-200KM<input type="checkbox" name="attributes_car" value="1" id="range" class ="range"></li>
+                        <li>200-400KM<input type="checkbox" name="attributes_car" value="2" id="range" class ="range"></li>
+                        <li>400-600KM<input type="checkbox" name="attributes_car" value="3" id="range" class ="range"></li>
+                        <li>600+KM<input type="checkbox" name="attributes_car" value="3" id="range" class ="range"></li>
+                    </ul>
+                </div>
+            </div>
         <br><br><br>
-        <input type="checkbox" name="attributes_car" value="power" id="power" class ="power"> 
-        <label class="power" for="power">Power</label> 
-
-        <input type="checkbox" name="attributes_car" value="form_factor" id="form_factor"class="formfactor"> 
-        <label class="formfactor" for="power">Form Factor</label>
-
-        <input type="checkbox" name="attributes_car" value="price" id="price"class="price">
-        <label class="price" for="power">Price</label>
-        <br><br><br><br><br><br><br><br><br><br>
-        <input type="checkbox" name="attributes_car" value="ev_type" id="ev_type"class="ev_type"> 
-        <label class="ev_type" for="power">Electric/Hybrid</label> 
-
-        <input type="checkbox" name="attributes_car" value="safety" id="safety"class="safetyrating"> 
-        <label class="safetyrating" for="power">Safety Rating</label> 
-
-        <input type="checkbox" name="attributes_car" value="range" id ="range"class="range">
-        <label class="range" for="power">Range</label> 
+         
         
+        </nav>
     </div>
+
+    
+
    
-    <br><br><br><br><br><br>
+    <br><br>
     <div class ="gobackhome"><a class="homebutton" href="index.html" targer="_blank" rel="nofollow noopener">Back</a></div>
-    <!-- <div class ="gobrands"><a class="brandsbutton" href="checklist2.html" targer="_blank" rel="nofollow noopener">Next</a></div> -->
+     <!-- <div class ="gobrands"><a class="brandsbutton" href="checklist2.html" targer="_blank" rel="nofollow noopener">Next</a></div> -->
     <div id="brandsbutton" class ="gobrands"><a class="brandsbutton" targer="_blank" rel="nofollow noopener">Next</a></div>
     
     <script>document.getElementById("brandsbutton").onclick = async function() {
@@ -57,7 +103,6 @@
         })
         console.log(await response.json())
     }</script>
-
 </body>
 </body>
 </html>
