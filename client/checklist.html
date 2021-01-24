@@ -16,33 +16,33 @@
                 <div class="power">
                     <button>Power</button>
                     <ul>
-                        <li><label><input type="checkbox" name="attributes_car" value="1" id="Low_power" class ="power">Weak</label></li>
-                        <li><label><input type="checkbox" name="attributes_car" value="2" id="Normal_power" class ="power">Medium</label></li>
-                        <li><label><input type="checkbox" name="attributes_car" value="3" id="High_power" class ="power">High</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="0" id="power_low" class ="power">Weak</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="150" id="power_normal" class ="power">Medium</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="300" id="power_high" class ="power">High</label></li>
                     </ul>
                 </div>
                 
                 <div class="drivetrain">
                     <button>Drive Train</button>
                     <ul>
-                        <li><label><input type="checkbox" name="attributes_car" value="1" id="drivetrain" class ="drivetrain">AWD</label></li>
-                        <li><label><input type="checkbox" name="attributes_car" value="2" id="drivetrain" class ="drivetrain">FWD</label></li>
-                        <li><label><input type="checkbox" name="attributes_car" value="3" id="drivetrain" class ="drivetrain">RWD</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="AWD" id="drivetrain_awd" class ="drivetrain">AWD</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="FWD" id="drivetrain_fwd" class ="drivetrain">FWD</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="RWD" id="drivetrain_rwd" class ="drivetrain">RWD</label></li>
                     </ul>
                 </div>
                 
                 <div class="formfactor">
                     <button>Form Factor</button>
                     <ul>
-                        <li><label><input type="checkbox" name="attributes_car" value="1" id="formfactor" class ="formfactor">Compact</label></li>
-                        <li><label><input type="checkbox" name="attributes_car" value="2" id="formfactor" class ="formfactor">Hatchback</label></li>
-                        <li><label><input type="checkbox" name="attributes_car" value="3" id="formfactor" class ="formfactor">Large</label></li>
-                        <li><label><input type="checkbox" name="attributes_car" value="4" id="formfactor" class ="formfactor">Mid-Size</label></li>
-                        <li><label><input type="checkbox" name="attributes_car" value="5" id="formfactor" class ="formfactor">Minivan</label></li>
-                        <li><label><input type="checkbox" name="attributes_car" value="6" id="formfactor" class ="formfactor">Sedan</label></li>
-                        <li><label><input type="checkbox" name="attributes_car" value="7" id="formfactor" class ="formfactor">Station Wagon<label></li>
-                        <li><label><input type="checkbox" name="attributes_car" value="8" id="formfactor" class ="formfactor">Subcompact</label></li>
-                        <li><label><input type="checkbox" name="attributes_car" value="9" id="formfactor" class ="formfactor">SUV</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="Compact" id="form_factor_compact" class ="formfactor">Compact</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="Hatchback" id="form_factor_hatchback" class ="formfactor">Hatchback</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="Large" id="form_factor_large" class ="formfactor">Large</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="Mid-size" id="form_factor_midsize" class ="formfactor">Mid-Size</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="Minivan" id="form_factor_minivan" class ="formfactor">Minivan</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="Sedan" id="form_factor_sedan" class ="formfactor">Sedan</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="Station Wagon" id="form_factor_stationwagon" class ="formfactor">Station Wagon<label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="Subcompact" id="form_factor_subcompact" class ="formfactor">Subcompact</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="SUV" id="form_factor_suv" class ="formfactor">SUV</label></li>
                     </ul>
                 </div>
                 
@@ -61,17 +61,21 @@
                 <div class="electrictype">
                     <button>Electric Type</button>
                     <ul>
-                        <li>Electric<input type="checkbox" name="attributes_car" value="1" id="ev_type" class ="electrictype"></li>
-                        <li>Hybrid<input type="checkbox" name="attributes_car" value="2" id="ev_type" class ="electrictype"></li>
+                        <li><input type="checkbox" name="attributes_car" value="BEV" id="ev_type_bev" class ="electrictype">Battery Electric Vehicle</li>
+                        <li><input type="checkbox" name="attributes_car" value="PHEV" id="ev_type_phev" class ="electrictype">Plug-in Hybrid</li>
+                        <li><input type="checkbox" name="attributes_car" value="HFCV" id="ev_type_hfcv" class ="electrictype">Hydrogen Fuel Cell</li>
                     </ul>
                 </div>
                 
                 <div class="safetyrating">
                     <button>Safety Rating</button>
                     <ul>
-                        <li><label><input type="checkbox" name="attributes_car" value="1" id="safety_rating" class ="safetyrating">Only 5</label></li>
-                        <li><label><input type="checkbox" name="attributes_car" value="2" id="safety_rating" class ="safetyrating">3 and up</label></li>
-                        <li><label><input type="checkbox" name="attributes_car" value="3" id="safety_rating" class ="safety_rating">Any</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="5" id="safety_rating" class ="safetyrating">5 stars</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="4" id="safety_rating" class ="safetyrating">4 stars</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="3" id="safety_rating" class ="safetyrating">3 stars</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="2" id="safety_rating" class ="safetyrating">2 stars</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="1" id="safety_rating" class ="safetyrating">1 star</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="0" id="safety_rating" class ="safetyrating">0 stars</label></li>
                     </ul>
                 </div>
                 
@@ -93,12 +97,12 @@
 
     <br><br><br><br><br><br><br><br><br><br><br>
     <div class ="gobackhome"><a class="homebutton" href="index.html" target="_self" rel="nofollow noopener">Back</a></div>
-    <div id="brandsbutton" class ="gobrands"><a class="brandsbutton" target="_self" rel="nofollow noopener">Next</a></div>
+    <div id="resultsbutton" class ="gobrands"><a class="brandsbutton" target="_self" rel="nofollow noopener">Next</a></div>
     
-    <script>document.getElementById("brandsbutton").onclick = async function() {
+    <script>document.getElementById("resultsbutton").onclick = async function() {
         var checkbox_vals = []
         var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
-
+        
         for (var i = 0; i < checkboxes.length; i++) {
             checkbox_vals.push(checkboxes[i].value)
         }
