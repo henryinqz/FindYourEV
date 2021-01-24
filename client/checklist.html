@@ -93,10 +93,8 @@
             },
             body: JSON.stringify(checkbox_vals)
         })
-                
-        // console.log(await response.json())
 
-        localStorage.setItem("key", JSON.stringify(await response.json()));
+        localStorage.setItem("car_data", JSON.stringify(await response.json()));
 
         window.location.href = 'results.html' // Load results page
     }</script>
