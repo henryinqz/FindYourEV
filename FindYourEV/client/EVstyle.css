@@ -64,7 +64,8 @@ p{
     text-decoration: none;
     font-size: 25px;
     position: relative;
-    bottom:560px
+    top:200px;
+    right:50px;
 
 }
 
@@ -79,14 +80,14 @@ p{
 .brandsbutton{
     color:white;
     background: #570a3d;
-    padding: 7px;
-    border-radius: 4px;
+    padding: 8px;
+    border-radius: 5px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
     font-size: 25px;
     position: relative;
-    top: 70px;
-    left: 5px;
+    top: 171px;
+    left: 40px;
 }
 
 .brandsbutton:hover {
@@ -117,8 +118,8 @@ p{
     position:absolute;
     background: white;
     margin-top: 10px;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -145,7 +146,7 @@ p{
 }
 
 .power li:hover, .formfactor li:hover, .price li:hover, .electrictype li:hover, .safetyrating li:hover, .range li:hover{
-    background-color: #b4afb3;
+    background-color: #dfddde;
 }
 
 .dropdown button{
