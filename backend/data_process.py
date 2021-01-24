@@ -81,13 +81,17 @@ def get_models_from_brands(car_data: Dict, brands: List[str]) -> List[str]:
     brands = ["Audi", "Honda"]
     '''
     models_from_search_brands = []
+    models_dict = {}
 
     for model in car_data:
         model_data = car_data[model]
         if model_data["brand"] in brands:
                 models_from_search_brands.append(model)
     
-    return models_from_search_brands
+    for model in models_from_search_brands:
+        models_dict[model] = car_data[model]
+ 
+    return models_dict
 
 def get_models_from_years(car_data: Dict, years: Dict[str, int]) -> List[str]:
     '''
