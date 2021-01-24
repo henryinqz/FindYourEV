@@ -81,7 +81,28 @@
    
     <br><br>
     <div class ="gobackhome"><a class="homebutton" href="index.html" targer="_blank" rel="nofollow noopener">Back</a></div>
-    <div class ="gobrands"><a class="brandsbutton" href="checklist2.html" targer="_blank" rel="nofollow noopener">Next</a></div>
+     <!-- <div class ="gobrands"><a class="brandsbutton" href="checklist2.html" targer="_blank" rel="nofollow noopener">Next</a></div> -->
+    <div id="brandsbutton" class ="gobrands"><a class="brandsbutton" targer="_blank" rel="nofollow noopener">Next</a></div>
+    
+    <script>document.getElementById("brandsbutton").onclick = async function() {
+        var checkbox_vals = []
+        var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+
+        for (var i = 0; i < checkboxes.length; i++) {
+            checkbox_vals.push(checkboxes[i].value)
+        }
+
+        console.log(checkbox_vals)
+        
+        const response = await fetch("http://127.0.0.1:5000/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(checkbox_vals)
+        })
+        console.log(await response.json())
+    }</script>
 </body>
 </body>
 </html>
