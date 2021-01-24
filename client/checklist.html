@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="EVstyle.css">
 </head>
 <body style="text-align: center; margin-top: 2%;margin-bottom: 2%;margin-left: 5%;margin-right: 5%margin-left: 5%;margin-right: 5%">
-  
-    <br><br><br><br><br><br><br><br><br>
+    
+    <br><br><br><br>
     
     <div >
         <nav>
@@ -16,64 +16,82 @@
                 <div class="power">
                     <button>Power</button>
                     <ul>
-                        <li>Weak<input type="checkbox" name="attributes_car" value="1" id="power" class ="power"></li>
-                        <li>Medium<input type="checkbox" name="attributes_car" value="2" id="power" class ="power"></li>
-                        <li>Strong<input type="checkbox" name="attributes_car" value="3" id="power" class ="power"></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="1" id="Low_power" class ="power">Weak</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="2" id="Normal_power" class ="power">Medium</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="3" id="High_power" class ="power">High</label></li>
                     </ul>
                 </div>
-
+                
+                <div class="drivetrain">
+                    <button>Drive Train</button>
+                    <ul>
+                        <li><label><input type="checkbox" name="attributes_car" value="1" id="drivetrain" class ="drivetrain">AWD</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="2" id="drivetrain" class ="drivetrain">FWD</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="3" id="drivetrain" class ="drivetrain">RWD</label></li>
+                    </ul>
+                </div>
+                
                 <div class="formfactor">
                     <button>Form Factor</button>
                     <ul>
-                        <li>AWD<input type="checkbox" name="attributes_car" value="1" id="formfactor" class ="formfactor"></li>
-                        <li>FWD<input type="checkbox" name="attributes_car" value="2" id="formfactor" class ="formfactor"></li>
-                        <li>BWD<input type="checkbox" name="attributes_car" value="3" id="formfactor" class ="formfactor"></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="1" id="formfactor" class ="formfactor">Compact</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="2" id="formfactor" class ="formfactor">Hatchback</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="3" id="formfactor" class ="formfactor">Large</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="4" id="formfactor" class ="formfactor">Mid-Size</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="5" id="formfactor" class ="formfactor">Minivan</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="6" id="formfactor" class ="formfactor">Sedan</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="7" id="formfactor" class ="formfactor">Station Wagon<label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="8" id="formfactor" class ="formfactor">Subcompact</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="9" id="formfactor" class ="formfactor">SUV</label></li>
                     </ul>
                 </div>
-
+                
                 <div class="price">
-                    <buttonc>Price</button>
+                    <button>Max Price</button>
                     <ul>
-                        <li>0-50000<input type="checkbox" name="attributes_car" value="1" id="price" class ="price"></li>
-                        <li>50000-100000<input type="checkbox" name="attributes_car" value="2" id="price" class ="price"></li>
-                        <li>100000-200000<input type="checkbox" name="attributes_car" value="3" id="price" class ="price"></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="1" id="price" class ="price">50000</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="2" id="price" class ="price">75000</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="3" id="price" class ="price">100000</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="4" id="price" class ="price">150000</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="5" id="price" class ="price">None</label></li>
                         
                     </ul>
                 </div>
-
+                
                 <div class="electrictype">
-                    <button>Electric/Hybrid</button>
+                    <button>Electric Type</button>
                     <ul>
                         <li>Electric<input type="checkbox" name="attributes_car" value="1" id="ev_type" class ="electrictype"></li>
                         <li>Hybrid<input type="checkbox" name="attributes_car" value="2" id="ev_type" class ="electrictype"></li>
                     </ul>
                 </div>
-
+                
                 <div class="safetyrating">
                     <button>Safety Rating</button>
                     <ul>
-                        <li>Only 5<input type="checkbox" name="attributes_car" value="1" id="safety_rating" class ="safetyrating"></li>
-                        <li>3 and up<input type="checkbox" name="attributes_car" value="2" id="safety_rating" class ="safetyrating"></li>
-                        <li>Any<input type="checkbox" name="attributes_car" value="3" id="safety_rating" class ="safety_rating"></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="1" id="safety_rating" class ="safetyrating">Only 5</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="2" id="safety_rating" class ="safetyrating">3 and up</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="3" id="safety_rating" class ="safety_rating">Any</label></li>
                     </ul>
                 </div>
-
+                
                 <div class="range">
                     <button>Range</button>
                     <ul>
-                        <li>0-200KM<input type="checkbox" name="attributes_car" value="1" id="range" class ="range"></li>
-                        <li>200-400KM<input type="checkbox" name="attributes_car" value="2" id="range" class ="range"></li>
-                        <li>400-600KM<input type="checkbox" name="attributes_car" value="3" id="range" class ="range"></li>
-                        <li>600+KM<input type="checkbox" name="attributes_car" value="3" id="range" class ="range"></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="1" id="range" class ="range">0-200KM   </label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="2" id="range" class ="range">200-400KM   </label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="3" id="range" class ="range">400-600KM</label></li>
+                        <li><label><input type="checkbox" name="attributes_car" value="4" id="range" class ="range" >600+KM</label></li>
                     </ul>
                 </div>
             </div>
         <br><br><br>
          
+        
         </nav>
     </div>
-   
-    <br><br>
+
+    <br><br><br><br><br><br><br><br><br><br><br>
     <div class ="gobackhome"><a class="homebutton" href="index.html" target="_self" rel="nofollow noopener">Back</a></div>
     <div id="brandsbutton" class ="gobrands"><a class="brandsbutton" target="_self" rel="nofollow noopener">Next</a></div>
     
