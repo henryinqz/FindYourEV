@@ -1,5 +1,5 @@
 <?php
 
-include("client/");
+include("/client/*");
 
 ?> 
