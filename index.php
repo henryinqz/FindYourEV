@@ -1,5 +1,5 @@
 <?php
 
-include_once("client/");
+include_once("client/index.html");
 
 ?> 
