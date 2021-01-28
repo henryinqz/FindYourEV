@@ -1,5 +1,4 @@
 <?php
-
-include_once("client\index.html");
+header("Location: client/index.html");
 
 ?> 
