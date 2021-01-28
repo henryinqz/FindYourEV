@@ -1,11 +1,6 @@
 # FindYourEV
 
-<<<<<<< HEAD
-### http://findyourev.online/
-### http://findyourev.herokuapp.com/
-=======
 ### http://findyourev.online/ (or http://findyourev.herokuapp.com/)
->>>>>>> 67185e254bb45e3e8a639fb2a66183798cdcb706
 
 Find your EV is the easiest way find to the most suitable electric car for you. By listening to you, Find your EV is able to search and compare the most relevant electric cars for you.
 
